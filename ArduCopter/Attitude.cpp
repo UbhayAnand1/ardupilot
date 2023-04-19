@@ -29,6 +29,7 @@ void Copter::update_throttle_hover()
 {
     // if not armed or landed or on standby then exit
     if (!motors->armed() || ap.land_complete || standby_active) {
+        
         return;
     }
 
