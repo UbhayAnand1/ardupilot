@@ -31,6 +31,7 @@ void Copter::update_throttle_hover()
     if (!motors->armed() || ap.land_complete || standby_active) {
         return;
     }
+    
 
     // do not update in manual throttle modes or Drift
     if (flightmode->has_manual_throttle() || (copter.flightmode->mode_number() == Mode::Number::DRIFT)) {
