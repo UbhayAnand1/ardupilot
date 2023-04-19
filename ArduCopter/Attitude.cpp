@@ -28,6 +28,7 @@ void Copter::run_rate_controller()
 // update estimated throttle required to hover (if necessary)
 //  called at 100hz
 void Copter::update_throttle_hover()
+    
 {
     // if not armed or landed or on standby then exit
     if (!motors->armed() || ap.land_complete || standby_active) {
